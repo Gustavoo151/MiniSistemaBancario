@@ -18,6 +18,11 @@ public class Conta implements Cliente {
         this.movimentacoes.add(movimentacoes);
     }
 
+    public void setSaldo(double valor){
+        if (valor > 0)
+            this.saldo += valor;
+    }
+
     public double getSaldo(){
         return this.saldo;
     }
