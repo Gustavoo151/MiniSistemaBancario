@@ -6,14 +6,14 @@ public class ContaCorrente extends Conta implements Rendimento {
     public void setDeposito(double valor){
         if (valor > 0){
             super.setSaldo(valor);
-            super.setMovimentacoes("Deposito: Hora" + LocalDate.now().toString() + "Valor:" + valor);
+            super.setMovimentacoes("Deposito-> Hora: " + LocalDate.now().toString() + " Valor: " + valor);
         }
     }
 
     public void saque(double valor){
         if (super.getSaldo() >= valor){
             super.setSaldo(valor);
-            super.setMovimentacoes("Saque: Hora" + LocalDate.now().toString() + "Valor:" + valor);
+            super.setMovimentacoes("Saque-> Hora: " + LocalDate.now().toString() + " Valor: " + valor);
         }
     }
 

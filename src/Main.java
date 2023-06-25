@@ -3,5 +3,11 @@
 public class Main {
     public static void main(String[] args) {
 
+        ContaCorrente cliemte1 = new ContaCorrente();
+        cliemte1.setNome("Gustavo");
+
+        cliemte1.setDeposito(1000);
+
+        cliemte1.getExtrato();
     }
 }
