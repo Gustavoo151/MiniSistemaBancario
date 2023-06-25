@@ -1,3 +1,4 @@
+import controller.Controller;
 import model.ContaCorrente;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -5,6 +6,7 @@ import model.ContaCorrente;
 public class Main {
     public static void main(String[] args) {
 
-
+        Controller controller = new Controller();
+        controller.CriacaoConta();
     }
 }

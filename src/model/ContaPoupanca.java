@@ -6,8 +6,10 @@ import java.time.LocalDate;
 
 public class ContaPoupanca extends Conta implements Rendimento {
 
-    public ContaPoupanca(){
-
+    public ContaPoupanca(String nome, String cpf, double valorInicialSaldo){
+        super.setNome(nome);
+        super.setCpf(cpf);
+        super.setSaldo(valorInicialSaldo);
     }
 
     public double getRendimento() {

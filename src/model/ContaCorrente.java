@@ -6,6 +6,13 @@ import java.time.LocalDate;
 
 public class ContaCorrente extends Conta implements Rendimento {
 
+    public ContaCorrente(String nome, String cpf, double valorInicialSaldo){
+        super.setNome(nome);
+        super.setCpf(cpf);
+        super.setSaldo(valorInicialSaldo);
+    }
+
+
     public void setDeposito(double valor){
         if (valor > 0){
             super.setSaldo(valor);

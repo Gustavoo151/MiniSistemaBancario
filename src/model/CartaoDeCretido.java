@@ -8,6 +8,12 @@ public class CartaoDeCretido extends Conta {
     private double fatura;
     private ArrayList<String> faturaDetalhada = new ArrayList<>();
 
+    public CartaoDeCretido(String nome, String cpf, double valorInicialSaldo){
+        super.setNome(nome);
+        super.setCpf(cpf);
+        super.setSaldo(valorInicialSaldo);
+    }
+
     public double getFatura(){
         return this.fatura;
     }

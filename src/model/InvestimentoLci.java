@@ -6,6 +6,12 @@ import java.time.LocalDate;
 
 public class InvestimentoLci extends Conta implements Rendimento {
 
+    public InvestimentoLci(String nome, String cpf, double valorInicialSaldo){
+        super.setNome(nome);
+        super.setCpf(cpf);
+        super.setSaldo(valorInicialSaldo);
+    }
+
     public void resgate(Double valor){
         if (valor < super.getSaldo()){
             super.setSaldo(valor);
