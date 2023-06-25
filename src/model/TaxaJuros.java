@@ -1,3 +1,5 @@
+package model;
+
 public class TaxaJuros {
     private static double taxajuros;
 

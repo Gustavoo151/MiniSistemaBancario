@@ -1,7 +1,9 @@
+package model;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class CartaoDeCretido extends Conta{
+public class CartaoDeCretido extends Conta {
 
     private double fatura;
     private ArrayList<String> faturaDetalhada = new ArrayList<>();
@@ -39,6 +41,6 @@ public class CartaoDeCretido extends Conta{
     }
 
     public void faturaMes(){
-        
+
     }
 }

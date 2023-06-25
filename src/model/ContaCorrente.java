@@ -1,4 +1,7 @@
-import interfaces.Rendimento;
+package model;
+
+import model.interfaces.Rendimento;
+
 import java.time.LocalDate;
 
 public class ContaCorrente extends Conta implements Rendimento {

@@ -1,4 +1,6 @@
-import interfaces.Cliente;
+package model;
+
+import model.interfaces.Cliente;
 
 import java.util.ArrayList;
 

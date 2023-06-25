@@ -1,4 +1,6 @@
-import interfaces.Rendimento;
+package model;
+
+import model.interfaces.Rendimento;
 
 import java.time.LocalDate;
 
