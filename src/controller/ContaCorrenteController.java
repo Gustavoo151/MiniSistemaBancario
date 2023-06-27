@@ -17,7 +17,7 @@ public class ContaCorrenteController {
     }
 
 
-    public void operacoesContaCorrente(){
+    public void operacoes(){
         int operacao = 1;
         double valor;
 
@@ -31,7 +31,7 @@ public class ContaCorrenteController {
                 case 1:
                     double rendimento;
                     rendimento = this.contaCorrente.getRendimento();
-                    System.out.printf("O remento mensal será R$%.2f: \n", rendimento);
+                    System.out.printf("O rendimento mensal será R$%.2f: \n", rendimento);
                     break;
 
                 case 2:

@@ -14,33 +14,28 @@ public class UserController {
     public void CriacaoConta(){
         this.menu();
 
-        switch (this.opcaoMenu){
-            case 1:
+        switch (this.opcaoMenu) {
+            case 1 -> {
                 this.setDadosCliente();
                 ContaCorrenteController contaCorrente = new ContaCorrenteController(this.nome, this.cpf, this.saldoValor);
-                contaCorrente.operacoesContaCorrente();
-                break;
-
-            case 2:
+                contaCorrente.operacoes();
+            }
+            case 2 -> {
                 this.setDadosCliente();
-                Conta contaPoupanca = new ContaPoupanca(this.nome, this.cpf, this.saldoValor);
-                System.out.println("Conta Poupança criada.");
-                break;
-
-            case 3:
+                ContaPoupancaController contaPoupanca = new ContaPoupancaController(this.nome, this.cpf, this.saldoValor);
+                contaPoupanca.operacoes();
+            }
+            case 3 -> {
                 this.setDadosCliente();
                 Conta investimentoCli = new InvestimentoLci(this.nome, this.cpf, this.saldoValor);
                 System.out.println("Conta Investimento LCI,");
-                break;
-
-            case 4:
+            }
+            case 4 -> {
                 this.setDadosCliente();
                 Conta cartaoDeCredito = new CartaoDeCretido(this.nome, this.cpf, this.saldoValor);
                 System.out.println("Conta Cartão Crédito Criada.");
-                break;
-
-            default:
-                System.out.println("Opção inválida!");
+            }
+            default -> System.out.println("Opção inválida!");
         }
     }
 
