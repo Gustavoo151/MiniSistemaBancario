@@ -21,8 +21,7 @@ public class Conta implements Cliente {
     }
 
     public void setSaldo(double valor){
-        if (valor > 0)
-            this.saldo += valor;
+        this.saldo += valor;
     }
 
     public double getSaldo(){

@@ -17,10 +17,11 @@ public class ContaPoupanca extends Conta implements Rendimento {
     }
 
     public void aplicacao(double valor){
-        if (valor > 0)
+        if (valor > 0){
             super.setSaldo(valor);
-        super.setMovimentacoes("Aplição: Hora" + LocalDate.now().toString() + "Valor:" + valor);
-
+            super.setMovimentacoes("Aplição: Hora" + LocalDate.now().toString() + "Valor:" + valor);
+            System.out.println("Aplição realizada com sucesso.");
+        }
     }
 
     public void resgate(double valor){
