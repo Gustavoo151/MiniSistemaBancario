@@ -12,11 +12,16 @@ public class InvestimentoLci extends Conta implements Rendimento {
         super.setSaldo(valorInicialSaldo);
     }
 
-    public void resgate(Double valor){
+    public InvestimentoLci(){}
+
+    public boolean resgate(Double valor){
         if (valor < super.getSaldo()){
             super.setSaldo(valor);
             super.setMovimentacoes("Resgate-> Hora: " + LocalDate.now().toString() + " Valor: " + valor);
+            return true;
         }
+        else
+            return false;
     }
 
     public void SetAporte(double valor){

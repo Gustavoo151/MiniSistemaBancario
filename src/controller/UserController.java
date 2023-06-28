@@ -27,8 +27,8 @@ public class UserController {
             }
             case 3 -> {
                 this.setDadosCliente();
-                Conta investimentoCli = new InvestimentoLci(this.nome, this.cpf, this.saldoValor);
-                System.out.println("Conta Investimento LCI,");
+                InvestimentoLciController investimentoCli = new InvestimentoLciController(this.nome, this.cpf, this.saldoValor);
+                investimentoCli.operacoes();
             }
             case 4 -> {
                 this.setDadosCliente();
