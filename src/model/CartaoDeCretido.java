@@ -22,7 +22,7 @@ public class CartaoDeCretido extends Conta {
 
     public void pagarCompra(double valor){
         if (valor < super.getSaldo()){
-            super.setSaldo(valor);
+            super.setSaldo(-valor);
             super.setMovimentacoes("Compra Debito-> Hora: " + LocalDate.now().toString() + " Valor: R$" + valor);
         }
         else{
@@ -32,9 +32,9 @@ public class CartaoDeCretido extends Conta {
     }
 
     public void pagarFatura(double valor){
-        if (valor < super.getSaldo()){
-            this.fatura += valor;
-            super.setSaldo(valor);
+        if (valor <= super.getSaldo()){
+            this.fatura -= valor;
+            super.setSaldo(-valor);
             super.setMovimentacoes("Pagamento da fatura-> Hora: " + LocalDate.now().toString() + " Valor: R$" + valor);
             this.faturaDetalhada.add("Pagagamento da fatura-> Hora: " + LocalDate.now().toString() + " Valor: R$" + valor);
             System.out.println("Pagamento efetuado com sucesso:");
