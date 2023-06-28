@@ -12,6 +12,7 @@ public class ContaPoupancaController {
         System.out.println("Conta Corrente Criada.");
     }
 
+    public void ContaPoupancaController(){}
 
     public void operacoes(){
         int operacao = -1;

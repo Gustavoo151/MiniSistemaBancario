@@ -14,6 +14,8 @@ public class CartaoDeCretido extends Conta {
         super.setSaldo(valorInicialSaldo);
     }
 
+    public CartaoDeCretido() {}
+
     public double getFatura(){
         return this.fatura;
     }
@@ -21,11 +23,11 @@ public class CartaoDeCretido extends Conta {
     public void pagarCompra(double valor){
         if (valor < super.getSaldo()){
             super.setSaldo(valor);
-            super.setMovimentacoes("Compra Debito-> Hora: " + LocalDate.now().toString() + " Valor: " + valor);
+            super.setMovimentacoes("Compra Debito-> Hora: " + LocalDate.now().toString() + " Valor: R$" + valor);
         }
         else{
             fatura += valor;
-            this.faturaDetalhada.add("Compra Crédito-> Hora: " + LocalDate.now().toString() + " Valor: " + valor);
+            this.faturaDetalhada.add("Compra Crédito-> Hora: " + LocalDate.now().toString() + " Valor: R$" + valor);
         }
     }
 
@@ -33,8 +35,9 @@ public class CartaoDeCretido extends Conta {
         if (valor < super.getSaldo()){
             this.fatura += valor;
             super.setSaldo(valor);
-            super.setMovimentacoes("Pagamento da fatura-> Hora: " + LocalDate.now().toString() + " Valor: " + valor);
-            this.faturaDetalhada.add("Compra Crédito-> Hora: " + LocalDate.now().toString() + " Valor: " + valor);
+            super.setMovimentacoes("Pagamento da fatura-> Hora: " + LocalDate.now().toString() + " Valor: R$" + valor);
+            this.faturaDetalhada.add("Pagagamento da fatura-> Hora: " + LocalDate.now().toString() + " Valor: R$" + valor);
+            System.out.println("Pagamento efetuado com sucesso:");
         }
         else
             System.out.println("Saldo insuficiente!");

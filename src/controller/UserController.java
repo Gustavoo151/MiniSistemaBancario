@@ -1,5 +1,4 @@
 package controller;
-import model.*;
 import java.util.Scanner;
 
 public class UserController {
