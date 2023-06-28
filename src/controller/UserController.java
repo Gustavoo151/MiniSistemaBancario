@@ -29,8 +29,8 @@ public class UserController {
             }
             case 4 -> {
                 this.setDadosCliente();
-                Conta cartaoDeCredito = new CartaoDeCretido(this.nome, this.cpf, this.saldoValor);
-                System.out.println("Conta Cartão Crédito Criada.");
+                CartaoDeCreditoController cartaoDeCredito = new CartaoDeCreditoController(this.nome, this.cpf, this.saldoValor);
+                cartaoDeCredito.operacoes();
             }
 
             default -> System.out.println("Opção inválida!");
@@ -47,7 +47,7 @@ public class UserController {
         System.out.println("Digite o Saldo Inicial:");
         this.saldoValor = input.nextDouble();
     }
-    
+
     private void menu(){
         Scanner input = new Scanner(System.in);
         System.out.println("Digite qual tipo de você deseja criar: \n1- Conta Corrente.\n2- Conta Poupança.\n3- Investimento Cli.\n4- Cartão de Crédito.");
