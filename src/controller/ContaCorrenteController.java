@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ContaCorrenteController {
 
-    ContaCorrente contaCorrente = new ContaCorrente();
+    private ContaCorrente contaCorrente = new ContaCorrente();
 
     public ContaCorrenteController(String nome, String cpf, double saldoValor){
         this.contaCorrente.setNome(nome);

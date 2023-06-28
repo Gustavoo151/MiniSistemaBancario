@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CartaoDeCreditoController {
 
-    CartaoDeCretido contaCartaoCredito;
+    private CartaoDeCretido contaCartaoCredito;
 
     public CartaoDeCreditoController(String nome, String cpf, double saldoValor){
         this.contaCartaoCredito = new CartaoDeCretido(nome, cpf, saldoValor);

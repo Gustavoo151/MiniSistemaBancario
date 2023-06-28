@@ -3,7 +3,7 @@ import model.InvestimentoLci;
 import java.util.Scanner;
 
 public class InvestimentoLciController {
-    InvestimentoLci contaLCI;
+    private InvestimentoLci contaLCI;
 
     public InvestimentoLciController(String nome, String cpf, double saldoValor){
         this.contaLCI = new InvestimentoLci(nome, cpf, saldoValor);

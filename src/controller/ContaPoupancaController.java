@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ContaPoupancaController {
 
-    ContaPoupanca contaPoupanca;
+    private ContaPoupanca contaPoupanca;
 
     public ContaPoupancaController(String nome, String cpf, double saldoValor){
         this.contaPoupanca = new ContaPoupanca(nome, cpf, saldoValor);
