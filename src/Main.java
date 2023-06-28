@@ -5,7 +5,7 @@ import controller.UserController;
 public class Main {
     public static void main(String[] args) {
 
-        UserController UserController = new UserController();
-        UserController.CriacaoConta();
+        UserController userController = new UserController();
+        userController.CriacaoConta();
     }
 }
